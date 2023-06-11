@@ -8,66 +8,66 @@
 </head>
 <body>
     <Script>
-        let choices = ["rock", "scissors", "paper"]
+        const choices = ["rock", "scissors", "paper"]
         function getComputerChoice() {
-            let x = choices[Math.floor(Math.random() * 3)];
+            const x = choices[Math.floor(Math.random() * 3)];
             return x
         };
 
 //  const computerSelection = getComputerChoice();
-// let selection = prompt("What is your choice? Rock, Paper or Scissors? ");
+// const selection = prompt("What is your choice? Rock, Paper or Scissors? ");
         // const playerSelection = selection.toLowerCase();
           
 
         function playRound() {
 
-            let selection = prompt("What is your choice? Rock, Paper or Scissors? ");
+            const selection = prompt("What is your choice? Rock, Paper or Scissors? ");
             const playerSelection = selection.toLowerCase();
             const computerSelection = getComputerChoice();
 
             if (playerSelection === "scissors" && computerSelection === "scissors" 
             || playerSelection === "rock" && computerSelection === "rock"
             || playerSelection === "paper" && computerSelection === "paper") {
-                let tie = "It is a tie.";
+                const tie = "It is a tie.";
                 return tie
             } else if (playerSelection === "scissors" && computerSelection === "paper") {
-                let pWin = "Player wins! Scissors beat paper.";
+                const pWin = "Player wins! Scissors beat paper.";
                 return pWin
             } else if (playerSelection === "rock" && computerSelection === "scissors") {
-                let pWin = "Player wins! Rock beats scissors.";
+                const pWin = "Player wins! Rock beats scissors.";
                 return pWin
             } else if (playerSelection === "paper" && computerSelection === "rock") {
-                let pWin = "Player wins! Paper beats rock.";
+                const pWin = "Player wins! Paper beats rock.";
                 return pWin
             } else if (playerSelection === "paper" && computerSelection === "scissors") {
-                let cWin = "Computer wins! Scissors beat paper.";
+                const cWin = "Computer wins! Scissors beat paper.";
                 return cWin 
             } else if (playerSelection === "scissors" && computerSelection === "rock"){
-                let cWin = "Computer wins! Rock beats scissors.";
+                const cWin = "Computer wins! Rock beats scissors.";
                 return cWin 
             } else if (playerSelection === "rock" && computerSelection === "paper"){ 
-                let cWin = "Computer wins! Paper beats rock.";
+                const cWin = "Computer wins! Paper beats rock.";
                 return cWin 
             } else {
-                let wrong = "Wrong spelling."
+                const wrong = "Wrong spelling."
                 return wrong
             }
         };
         
         
         function game() {
-            let roundOne = playRound();
+            const roundOne = playRound();
             console.log( roundOne );
-            let roundTwo = playRound();
+            const roundTwo = playRound();
             console.log( roundTwo );    
-            let roundThree = playRound();
+            const roundThree = playRound();
             console.log( roundThree );
-            let roundFour = playRound();
+            const roundFour = playRound();
             console.log( roundFour );    
-            let roundFive = playRound();
+            const roundFive = playRound();
             console.log( roundFive );
 
-            let arr = [ roundOne, roundTwo, roundThree, roundFour, roundFive ];
+            const arr = [ roundOne, roundTwo, roundThree, roundFour, roundFive ];
             let pCount = 0;
             let cCount = 0;
             
