@@ -25,9 +25,9 @@
             const playerSelection = selection.toLowerCase();
             const computerSelection = getComputerChoice();
 
-            if (playerSelection === "scissors" && computerSelection === "scissors" 
-            || playerSelection === "rock" && computerSelection === "rock"
-            || playerSelection === "paper" && computerSelection === "paper") {
+            if (playerSelection === "scissors" && computerSelection === "scissors" ||
+              playerSelection === "rock" && computerSelection === "rock" ||
+              playerSelection === "paper" && computerSelection === "paper") {
                 const tie = "It is a tie.";
                 return tie
             } else if (playerSelection === "scissors" && computerSelection === "paper") {
