@@ -8,6 +8,8 @@
 </head>
 <body>
     <Script>
+
+        //I created a function for the computer to make a random choice among three picks.
         const choices = ["rock", "scissors", "paper"]
         function getComputerChoice() {
             const x = choices[Math.floor(Math.random() * 3)];
@@ -15,6 +17,7 @@
         };
 
 
+        // This function  will play one round and return a value but not show it on the console log.
         function playRound() {
 
             const selection = prompt("What is your choice? Rock, Paper or Scissors? ");
@@ -50,7 +53,7 @@
             }
         };
         
-        
+        // This function will play game for five rounds and show the winner of each game on the console.
         function game() {
             const roundOne = playRound();
             console.log( roundOne );
@@ -67,6 +70,8 @@
             let pCount = 0;
             let cCount = 0;
             
+
+            //This is to find out who had more wins out of five game rounds: player or computer?
             for (element of arr) {
                 if (element.includes("Player ")) {
                     pCount += 1;
@@ -84,7 +89,8 @@
             }
         
         }
-
+        
+        //Call the game function to start playing.
         game();
 
     </Script>
